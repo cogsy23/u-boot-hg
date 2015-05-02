@@ -21,9 +21,12 @@
 #define CONFIG_ZYNQ_SDHCI0
 #define CONFIG_ZYNQ_USB
 #define CONFIG_ZYNQ_QSPI
-#define CONFIG_ZYNQ_I2C0
+#define CONFIG_ZYNQ_I2C1
 #define CONFIG_ZYNQ_EEPROM
 #define CONFIG_ZYNQ_BOOT_FREEBSD
+
+#define CONFIG_CMD_GPIO
+#define CONFIG_ZYNQ_GPIO
 
 #include <configs/zynq-common.h>
 
