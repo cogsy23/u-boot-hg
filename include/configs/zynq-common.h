@@ -210,12 +210,8 @@
 		"cp.b 0xE2620000 0x2000000 ${ramdisk_size} && " \
 		"bootm 0x3000000 0x2000000 0x2A00000\0" \
 	"qspiboot=echo Copying Linux from QSPI flash to RAM... && " \
-		"sf probe 0 0 0 && " \
-		"sf read 0x3000000 0x100000 ${kernel_size} && " \
-		"sf read 0x2A00000 0x600000 ${devicetree_size} && " \
-		"echo Copying ramdisk... && " \
-		"sf read 0x2000000 0x620000 ${ramdisk_size} && " \
-		"bootm 0x3000000 0x2000000 0x2A00000\0" \
+		"echo Assuming BOOT Code copied images... && " \
+		"bootm 0x5000000 0x7000000 0x6000000\0" \
 	"uenvboot=" \
 		"if run loadbootenv; then " \
 			"echo Loaded environment from ${bootenv}; " \
@@ -227,11 +223,8 @@
 		"fi\0" \
 	"sdboot=if mmcinfo; then " \
 			"run uenvboot; " \
-			"echo Copying Linux from SD to RAM... && " \
-			"fatload mmc 0 0x2000000 ${kernel_image} && " \
-			"fatload mmc 0 0x4000000 ${devicetree_image} && " \
-			"fatload mmc 0 0x5000000 ${ramdisk_image} && " \
-			"bootm 0x2000000 0x5000000 0x4000000; " \
+			"echo Assuming BOOT Code copied images... && " \
+			"bootm 0x5000000 0x7000000 0x6000000; " \
 		"fi\0" \
 	"usbboot=if usb start; then " \
 			"run uenvboot; " \
