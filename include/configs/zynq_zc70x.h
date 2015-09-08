@@ -25,16 +25,6 @@
 #define CONFIG_ZYNQ_EEPROM
 #define CONFIG_ZYNQ_BOOT_FREEBSD
 
-#define CONFIG_RBTREE
-#define CONFIG_LZO
-#define CONFIG_CMD_MTDPARTS
-#define CONFIG_MTD_DEVICE
-#define CONFIG_MTD_PARTITIONS
-
-
-#define CONFIG_CMD_UBI
-#define CONFIG_CMD_UBIFS
-
 #include <configs/zynq-common.h>
 
 #endif /* __CONFIG_ZYNQ_ZC70X_H */
