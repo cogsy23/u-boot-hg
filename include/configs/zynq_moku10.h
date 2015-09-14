@@ -140,7 +140,7 @@
 /* Default environment */
 #define CONFIG_PREBOOT
 #define CONFIG_EXTRA_ENV_SETTINGS	\
-	"ethaddr=00:0a:35:00:01:22\0"	\
+	"ethaddr=70:b3:d5:87:B0:00\0"	\
 	"fdt_high=0x20000000\0"	\
 	"initrd_high=0x20000000\0"	\
 	"qspiboot=echo Copying Linux from QSPI flash to RAM... && " \
