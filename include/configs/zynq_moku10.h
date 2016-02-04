@@ -146,10 +146,8 @@
 	"qspiboot=echo Copying Linux from QSPI flash to RAM... && " \
 		"echo Assuming BOOT Code copied images... && " \
 		"bootm 0x5000000 0x7000000 0x6000000\0" \
-	"sdboot=if mmcinfo; then " \
-			"echo Assuming BOOT Code copied images... && " \
-			"bootm 0x5000000 0x7000000 0x6000000; " \
-		"fi\0" \
+	"sdboot=echo Assuming BOOT Code copied images... && " \
+			"bootm 0x5000000 0x7000000 0x6000000;\0" \
 
 /* default boot is according to the bootmode switch settings */
 #define CONFIG_BOOTCOMMAND		"run $modeboot"
