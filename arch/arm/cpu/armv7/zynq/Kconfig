@@ -27,6 +27,9 @@ config TARGET_ZYNQ_CSE
 config TARGET_ZYNQ_MOKU10
 	bool "Zynq Moku10 Board"
 
+config TARGET_ZYNQ_MOKU20
+	bool "Zynq Moku20 Board"
+
 endchoice
 
 config SYS_BOARD
@@ -47,5 +50,6 @@ config SYS_CONFIG_NAME
 	default "zynq_cse" if TARGET_ZYNQ_CSE
 	default "zynq_afx" if TARGET_ZYNQ_AFX
 	default "zynq_moku10" if TARGET_ZYNQ_MOKU10
+	default "zynq_moku20" if TARGET_ZYNQ_MOKU20
 
 endif
